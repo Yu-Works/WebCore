@@ -1,6 +1,8 @@
 package com.IceCreamQAQ.YuWeb
 
 import com.IceCreamQAQ.SmartWeb.WebServer
+import com.IceCreamQAQ.SmartWeb.http.Request
+import com.IceCreamQAQ.SmartWeb.http.Response
 import com.IceCreamQAQ.Yu.cache.EhcacheHelp
 import com.IceCreamQAQ.Yu.controller.Router
 import com.IceCreamQAQ.Yu.event.EventBus
@@ -88,7 +90,7 @@ abstract class InternalWebServer : WebServer {
     abstract fun start()
     abstract fun stop()
 
-    open suspend fun onRequest(req: H.Request, resp: H.Response) {
+    open suspend fun onRequest(req: Request, resp: Response) {
 
         val method = req.method.toLowerCase()
 

@@ -14,22 +14,20 @@ abstract class WebRouter : Invoker {
     val actions = ArrayList<WebAction>()
 
     override fun invoke(context: WebActionContext, index: Int): Boolean {
+        if (index >= context.path.size) return false
         val nextIndex = index + 1
-        if (context.path.size > nextIndex){
-            staticRouters[context.path[nextIndex]]?.let { if (it(context, nextIndex)) return true }
-            matchRouters.forEach { if (it(context, nextIndex)) return true }
-            actions.forEach { if (it(context, index)) return true }
-        }
+
+        staticRouters[context.path[index]]?.let { if (it(context, nextIndex)) return true }
+        matchRouters.forEach { if (it.match(context, index) && it(context, nextIndex)) return true }
+        actions.forEach { if (it(context, index)) return true }
+
         return false
     }
 }
 
-class WebMatchRouter(private val match: (WebActionContext, index: Int) -> Boolean) : WebRouter() {
+class WebMatchRouter(private val matchImpl: (WebActionContext, index: Int) -> Boolean) : WebRouter() {
 
-    override fun invoke(context: WebActionContext, index: Int): Boolean {
-        if (!match(context, index)) return false
-        return super.invoke(context, index)
-    }
+    fun match(context: WebActionContext, index: Int): Boolean = this.matchImpl(context, index)
 
 }
 

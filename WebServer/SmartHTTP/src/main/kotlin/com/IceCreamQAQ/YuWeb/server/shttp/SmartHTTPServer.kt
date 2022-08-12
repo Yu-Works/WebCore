@@ -1,7 +1,6 @@
 package com.IceCreamQAQ.YuWeb.server.shttp
 
 import com.IceCreamQAQ.SmartWeb.websocket.WsAction
-import com.IceCreamQAQ.SmartWeb.websocket.WsContext
 import com.IceCreamQAQ.YuWeb.InternalWebServer
 import com.IceCreamQAQ.YuWeb.server.shttp.websocket.WsHandler
 import kotlinx.coroutines.*

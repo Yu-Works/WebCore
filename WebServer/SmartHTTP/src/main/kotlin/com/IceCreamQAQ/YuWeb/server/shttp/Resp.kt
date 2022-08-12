@@ -1,12 +1,14 @@
 package com.IceCreamQAQ.YuWeb.server.shttp
 
+import com.IceCreamQAQ.SmartWeb.http.Request
+import com.IceCreamQAQ.SmartWeb.http.Response
 import com.IceCreamQAQ.YuWeb.H
 import org.smartboot.http.common.enums.HttpStatus
 import org.smartboot.http.server.HttpResponse
 import java.io.InputStream
 import java.io.OutputStream
 
-class Resp(val response: HttpResponse) : H.Response {
+class Resp(val response: HttpResponse) : Response {
 
     override var status: Int = 200
     override val cookies = ArrayList<H.Cookie>()

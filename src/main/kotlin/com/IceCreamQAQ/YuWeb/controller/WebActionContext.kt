@@ -1,5 +1,7 @@
 package com.IceCreamQAQ.YuWeb
 
+import com.IceCreamQAQ.SmartWeb.http.Request
+import com.IceCreamQAQ.SmartWeb.http.Response
 import com.IceCreamQAQ.Yu.controller.ActionContext
 import com.IceCreamQAQ.YuWeb.controller.WebActionInvoker
 import com.IceCreamQAQ.YuWeb.controller.render.Render
@@ -8,8 +10,8 @@ import java.lang.reflect.InvocationTargetException
 
 class WebActionContext(
     override var path: Array<String>,
-    val request: H.Request,
-    val response: H.Response
+    val request: Request,
+    val response: Response
 ) : ActionContext {
 
     var paras = JSONObject()

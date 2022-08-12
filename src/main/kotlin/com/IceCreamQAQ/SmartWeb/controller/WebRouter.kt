@@ -6,7 +6,7 @@ interface Invoker {
     operator fun invoke(context: WebActionContext, index: Int): Boolean
 }
 
-abstract class WebRouter : Invoker {
+open class WebRouter : Invoker {
 
     val staticRouters = HashMap<String, WebRouter>()
     val matchRouters = ArrayList<WebMatchRouter>()

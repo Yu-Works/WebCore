@@ -30,11 +30,3 @@ class WebMatchRouter(private val matchImpl: (WebActionContext, index: Int) -> Bo
     fun match(context: WebActionContext, index: Int): Boolean = this.matchImpl(context, index)
 
 }
-
-class WebAction : Invoker {
-
-    override fun invoke(context: WebActionContext, index: Int): Boolean {
-        TODO("Not yet implemented")
-    }
-
-}

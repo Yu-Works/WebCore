@@ -2,12 +2,12 @@ plugins {
     java
     kotlin("jvm") version "1.7.10"
 }
-val coreVersion = "Yu-Core:0.2.0.0-DEV23"
+val coreVersion = "Yu-Core:0.2.0.0-DEV25"
 
 
 
 allprojects {
-    version = "0.0.2.0-DEV24"
+    version = "0.0.2.0-DEV25"
     val dir = projectDir.absolutePath.split(File.separator)
     val l2 = dir[dir.size - 2]
     group = if (name == "WebCore") "com.IceCreamQAQ.Yu"

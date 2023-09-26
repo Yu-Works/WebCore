@@ -4,7 +4,7 @@ import com.IceCreamQAQ.SmartWeb.http.Method
 import com.IceCreamQAQ.SmartWeb.http.Method.Companion.toHttpMethodOrNull
 import com.IceCreamQAQ.SmartWeb.http.Request
 import com.IceCreamQAQ.YuWeb.H
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import org.smartboot.http.server.HttpRequest
 import java.io.InputStream
 import java.net.InetSocketAddress

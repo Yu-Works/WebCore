@@ -5,7 +5,7 @@ import com.IceCreamQAQ.SmartWeb.http.Response
 import com.IceCreamQAQ.Yu.controller.ActionContext
 import com.IceCreamQAQ.YuWeb.controller.WebActionInvoker
 import com.IceCreamQAQ.YuWeb.controller.render.Render
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import java.lang.reflect.InvocationTargetException
 
 class WebActionContext(

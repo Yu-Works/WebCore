@@ -65,12 +65,6 @@ class TestController {
     @Action("testDownload")
     fun testDownload() = File("pom.xml")
 
-    //    @Action("testStudent")
-//    fun testStudent(student: Student) = "你好 ${student.studentName}。"
-//
-//    @Action("ta")
-//    fun tcp(testName: String) = "你好 $testName。"
-//
     @Action("tvn")
     fun tvn(@Min(50) @Max(100) tn: Long) = "测试数值：$tn。"
 
